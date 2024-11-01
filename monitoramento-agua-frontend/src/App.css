@@ -1,0 +1,94 @@
+/* Estilo geral */
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho com logo */
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-section, .history-section, .alert-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos de entrada arredondados */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões arredondados */
+.round-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.round-button + .round-button {
+  margin-left: 15px; /* Espaçamento entre os botões */
+}
+
+.round-button.clear {
+  background-color: #dc3545;
+}
+
+.round-button:hover {
+  background-color: #0056b3;
+}
+
+.round-button.clear:hover {
+  background-color: #c82333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+}
