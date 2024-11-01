@@ -7,7 +7,15 @@
       }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "/api/main.ts" }
+      { "src": "/api/(.*)", 
+      "dest": "src/main.ts",
+        "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+            ]
+        }
     ]
   }
   
