@@ -1,21 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "main.ts",
-        "use": "@vercel/node"
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "runtime": "nodejs16.x",
+        "installCommand": "npm ci",
+        "buildCommand": "npm run build",
+        "outputDirectory": "dist"
       }
-    ],
-    "routes": [
-      { "src": "/api/(.*)", 
-      "dest": "src/main.ts",
-        "methods": [
-            "GET",
-            "POST",
-            "PUT",
-            "DELETE"
-            ]
-        }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/serverless/functions/index"
+    }
+  ]
+}
   
