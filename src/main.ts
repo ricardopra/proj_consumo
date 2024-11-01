@@ -5,8 +5,17 @@ import { join } from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);  
-  app.enableCors();  
+  
+  // Habilitar CORS para permitir requisições do frontend
+  app.enableCors();
+
+  // Configurar ativos estáticos para servir arquivos públicos, como imagens e CSS
   app.useStaticAssets(join(__dirname, '..', 'public'));  
-  await app.listen(3000);
+
+  // Definindo a porta que o Vercel atribuirá automaticamente, ou 3000 como fallback
+  const PORT = process.env.PORT || 3000;
+  await app.listen(PORT);
+
+  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
