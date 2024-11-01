@@ -1,99 +1,47 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Projeto de Monitoramento de Consumo de Água
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Este projeto é uma API desenvolvida em NestJS para monitorar o consumo de água em uma comunidade. A API fornece funcionalidades para registrar o consumo de água, acessar o histórico de consumo e alertar sobre consumos elevados, alinhando-se ao Objetivo de Desenvolvimento Sustentável.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Funcionalidades
 
-## Description
+### 1. Registro de Consumo
+- Permite o registro diário do consumo de água de cada usuário.
+- Os dados do consumo são armazenados no banco de dados MongoDB.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### 2. Histórico de Consumo
+- Os usuários podem acessar o histórico de consumo de água.
+- O histórico pode ser filtrado por período, permitindo análises detalhadas.
 
-## Project setup
+### 3. Alertas de Consumo Elevado
+- A API envia alertas quando o consumo de água ultrapassa um limite predefinido.
+- Os alertas podem ser enviados via e-mail ou notificação (a ser implementado).
 
-```bash
-$ npm install
-```
+### 4. Interface Responsiva
+- O front-end é desenvolvido para ser responsivo, adaptando-se a diferentes tamanhos de tela.
+- Botões interativos que mudam de cor ao passar o cursor para melhorar a experiência do usuário.
 
-## Compile and run the project
+### 5. Integração com Banco de Dados
+- Utiliza MongoDB para armazenar dados de consumo e usuários.
 
-```bash
-# development
-$ npm run start
+### 6. Implementação em Nuvem
+- O projeto está hospedado no Vercel, proporcionando acesso fácil e escalabilidade.
+- As credenciais do MongoDB estão ocultas e seguras.
 
-# watch mode
-$ npm run start:dev
+## Tecnologias Utilizadas
+- **Backend**: NestJS
+- **Banco de Dados**: MongoDB
+- **ORM**: Mongoose
+- **Gerenciamento de Configuração**: @nestjs/config
+- **Hospedagem**: Vercel
+- **Frontend**: HTML/CSS (com possibilidade de frameworks adicionais)
 
-# production mode
-$ npm run start:prod
-```
+![image](https://github.com/user-attachments/assets/4b0ba8cb-8c88-4562-b5d0-41a8da4c1a99)
 
-## Run tests
+![image](https://github.com/user-attachments/assets/500ed2d9-4e66-4f70-a1fc-18cfee559aa7)
 
-```bash
-# unit tests
-$ npm run test
+![image](https://github.com/user-attachments/assets/b6f598d0-b749-4821-85ec-44958620c8b3)
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
 
-## Deployment
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
