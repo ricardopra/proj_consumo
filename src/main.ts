@@ -6,13 +6,13 @@ import { join } from 'path';
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  // Habilita CORS para todas as origens
+  
   app.enableCors();
 
-  // Serve arquivos estáticos da pasta "public"
+  
   app.useStaticAssets(join(__dirname, '..', 'public'));
 
-  // Define a porta para o servidor
+  
   await app.listen(3000);
 }
 

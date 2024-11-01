@@ -1,4 +1,3 @@
-// src/components/Historico.js
 import React, { useEffect, useState } from 'react';
 
 const Historico = () => {
@@ -6,7 +5,7 @@ const Historico = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = 'http://localhost:3000/consumo'; // URL da sua API
+  const API_URL = 'http://localhost:3000/consumo'; 
 
   useEffect(() => {
     const fetchHistorico = async () => {

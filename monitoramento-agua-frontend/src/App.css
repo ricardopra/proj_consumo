@@ -1,4 +1,3 @@
-/* Estilo geral */
 * {
   box-sizing: border-box;
 }
@@ -13,7 +12,7 @@
   align-items: center;
 }
 
-/* Cabeçalho com logo */
+
 header {
   display: flex;
   align-items: center;
@@ -25,7 +24,7 @@ header {
   margin-right: 15px;
 }
 
-/* Container principal */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Campos de entrada arredondados */
+
 input[type="text"],
 input[type="number"],
 input[type="date"] {
@@ -49,11 +48,11 @@ input[type="date"] {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 10px; /* Borda arredondada */
+  border-radius: 10px; 
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Botões arredondados */
+
 .round-button {
   background-color: #007bff;
   color: white;
@@ -66,7 +65,7 @@ input[type="date"] {
 }
 
 .round-button + .round-button {
-  margin-left: 15px; /* Espaçamento entre os botões */
+  margin-left: 15px; 
 }
 
 .round-button.clear {
@@ -86,7 +85,7 @@ ul {
   padding: 0;
 }
 
-/* Responsividade para dispositivos móveis */
+
 @media (max-width: 600px) {
   .container {
     width: 90%;
