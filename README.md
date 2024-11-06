@@ -17,14 +17,6 @@ As dependências principais usadas neste projeto são:
 - [MongoDB](https://www.mongodb.com/)
 - [Mongoose](https://mongoosejs.com/)
 
-### Instalação das Dependências
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/proj_consumo.git
-   cd proj_consumo
-   ```
-
 ```bash
 proj_consumo/
 ├── src/
